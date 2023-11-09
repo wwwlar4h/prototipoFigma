@@ -1,0 +1,11 @@
+C:\Users\2022102020030\source\repos\Prototipo_po2\Prototipo_po2\bin\Debug\Prototipo_po2.exe.config
+C:\Users\2022102020030\source\repos\Prototipo_po2\Prototipo_po2\bin\Debug\Prototipo_po2.exe
+C:\Users\2022102020030\source\repos\Prototipo_po2\Prototipo_po2\bin\Debug\Prototipo_po2.pdb
+C:\Users\2022102020030\source\repos\Prototipo_po2\Prototipo_po2\obj\Debug\Prototipo_po2.csproj.AssemblyReference.cache
+C:\Users\2022102020030\source\repos\Prototipo_po2\Prototipo_po2\obj\Debug\Prototipo_po2.csproj.SuggestedBindingRedirects.cache
+C:\Users\2022102020030\source\repos\Prototipo_po2\Prototipo_po2\obj\Debug\Prototipo_po2.Form1.resources
+C:\Users\2022102020030\source\repos\Prototipo_po2\Prototipo_po2\obj\Debug\Prototipo_po2.Properties.Resources.resources
+C:\Users\2022102020030\source\repos\Prototipo_po2\Prototipo_po2\obj\Debug\Prototipo_po2.csproj.GenerateResource.cache
+C:\Users\2022102020030\source\repos\Prototipo_po2\Prototipo_po2\obj\Debug\Prototipo_po2.csproj.CoreCompileInputs.cache
+C:\Users\2022102020030\source\repos\Prototipo_po2\Prototipo_po2\obj\Debug\Prototipo_po2.exe
+C:\Users\2022102020030\source\repos\Prototipo_po2\Prototipo_po2\obj\Debug\Prototipo_po2.pdb
