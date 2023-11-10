@@ -55,7 +55,8 @@
     <Compile Include="Funcionario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Validarcpf.cs" />
+    <Compile Include="Validar.cs" />
+    <Compile Include="ValidarEmail.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -96,6 +97,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Frame 1 %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Frame 1 %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Frame 1 %286%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

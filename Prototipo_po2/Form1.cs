@@ -47,8 +47,9 @@ namespace Prototipo_po2
             string cidade = txt_cidade.Text;    
             string id = txt_id.Text;    
 
+           Funcionario f = new Funcionario (id, nome, datanas, email, ende, estado, tele, funcao, rg, cpf, cidade, funcao);
 
-           //Funcionario f = new Funcionario (id, nome, datanas, email,ende, estado, funcao, rg, cpf, cidade,funcao);
+
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -86,8 +87,10 @@ namespace Prototipo_po2
         private void btn_cadastrar_Click(object sender, EventArgs e)
         {
             Validacoes.ValidaCpf(msk_cpf.Text);
+            Validacoes.ValidarEmail(txt_email.Text); 
             MessageBox.Show(Validacoes.ValidaCpf(msk_cpf.Text).ToString());
-      
+           
+
         }
 
         private void msk_sala_KeyPress(object sender, KeyPressEventArgs e)
@@ -128,6 +131,29 @@ namespace Prototipo_po2
             { 
                 e.Handled = true;
             }
+        }
+
+        private void txt_id_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 08)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void msk_rg_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void txt_email_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cm_funcao_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

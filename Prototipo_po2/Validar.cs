@@ -1,5 +1,7 @@
 ﻿using System.Windows.Forms;
 using System;
+using Prototipo_po2;
+using System.Text.RegularExpressions;
 
 public static class Validacoes
 {
@@ -66,7 +68,18 @@ public static class Validacoes
         {
             MessageBox.Show(" CPF inválido!");
             return false;
-        }
-    
+        } 
+    }
+
+    public static bool ValidarEmail(string email)
+    {
+        // Define a expressão regular para validar o e-mail
+        string pattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+
+        // Cria um objeto Regex com a expressão regular
+        Regex regex = new Regex(pattern);
+
+        // Verifica se o e-mail corresponde à expressão regular
+        return regex.IsMatch(email);
     }
 }
