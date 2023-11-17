@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using System.Xml.Linq;
+using Prototipo_po2.Conexao;
 
 namespace Prototipo_po2
 {
@@ -16,7 +17,10 @@ namespace Prototipo_po2
     {
         public Form1()
         {
-            InitializeComponent();
+            InitializeComponent(); 
+            Inserir();
+            Consultar();
+
             btn_cadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat; 
             btn_cadastrar.FlatAppearance.BorderSize = 0;
             btn_cadastrar.FlatAppearance.MouseDownBackColor = Color.Transparent;
@@ -49,6 +53,58 @@ namespace Prototipo_po2
 
            Funcionario f = new Funcionario (id, nome, datanas, email, ende, estado, tele, funcao, rg, cpf, cidade, funcao);
 
+        }
+        void Inserir()
+        {
+            var nomeFunc = "Larah Schultes";
+            var cpfFunc = "077.063.571-71";
+
+            try
+            {
+                Conexoes conexao = new Conexoes();
+
+                var comando = conexao.Comando("INSERT INTO funcionario (nome_func, cpf_func) VALUES (@nome, @cpf)");
+
+                comando.Parameters.AddWithValue("@nome", nomeFunc);
+                comando.Parameters.AddWithValue("@cpf", cpfFunc);
+
+                var resultado = comando.ExecuteNonQuery();
+
+                if (resultado > 0)
+                {
+                    MessageBox.Show("Funcionário cadastrado com sucesso");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        void Consultar()
+        {
+            try
+            {
+                var conexao = new Conexoes();
+
+                var comando = conexao.Comando("SELECT * FROM funcionario");
+
+                var leitor = comando.ExecuteReader();
+
+                string resultado = null;
+
+                while (leitor.Read())
+                {
+                    resultado += "\n" + leitor.GetString("nome_func");
+                }
+                MessageBox.Show(resultado);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
         }
         private void Form1_Load(object sender, EventArgs e)
