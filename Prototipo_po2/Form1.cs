@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using System.Xml.Linq;
 using Prototipo_po2.Conexao;
+using Org.BouncyCastle.Math.Field;
 
 namespace Prototipo_po2
 {
@@ -51,29 +52,38 @@ namespace Prototipo_po2
             string cidade = txt_cidade.Text;    
             string id = txt_id.Text;    
 
-           Funcionario f = new Funcionario (id, nome, datanas, email, ende, estado, tele, funcao, rg, cpf, cidade, funcao);
+           Funcionario f = new Funcionario ();
 
         }
-        void Inserir()
+        private void Inserir (Funcionario funcionario)
         {
-            var nomeFunc = "Larah Schultes";
-            var cpfFunc = "077.063.571-71";
-
+          
             try
             {
                 Conexoes conexao = new Conexoes();
 
                 var comando = conexao.Comando("INSERT INTO funcionario (nome_func, cpf_func) VALUES (@nome, @cpf)");
 
-                comando.Parameters.AddWithValue("@nome", nomeFunc);
-                comando.Parameters.AddWithValue("@cpf", cpfFunc);
+                comando.Parameters.AddWithValue("@ID", funcionario.id);
+                comando.Parameters.AddWithValue("@nome", funcionario.name);
+                comando.Parameters.AddWithValue("@cpf", funcionario.cpf);
+                comando.Parameters.AddWithValue("@datanas", funcionario.datanas);
+                comando.Parameters.AddWithValue("@email", funcionario.email);
+                comando.Parameters.AddWithValue("@rg", funcionario.rg);
+                comando.Parameters.AddWithValue("@endereco", funcionario.endereco);
+                comando.Parameters.AddWithValue("@estado", funcionario.estado);
+                comando.Parameters.AddWithValue("@telefone", funcionario.telefone);
+             
 
-                var resultado = comando.ExecuteNonQuery();
+               var resultado = comando.ExecuteNonQuery();
 
                 if (resultado > 0)
                 {
                     MessageBox.Show("Funcionário cadastrado com sucesso");
                 }
+
+                LimparTextBoxs();
+                Consultar();
 
             }
             catch (Exception ex)
@@ -82,7 +92,7 @@ namespace Prototipo_po2
             }
         }
 
-        void Consultar()
+         private void Consultar()
         {
             try
             {
@@ -96,6 +106,8 @@ namespace Prototipo_po2
 
                 while (leitor.Read())
                 {
+                    var funnionario = new Funcionario();
+
                     resultado += "\n" + leitor.GetString("nome_func");
                 }
                 MessageBox.Show(resultado);
@@ -107,6 +119,35 @@ namespace Prototipo_po2
             }
 
         }
+
+        private void LimparTextBoxs()
+        {
+            foreach (Control control in this.Controls)
+            {
+                if (control is TextBox) 
+                {
+                    control.Text = string.Empty;
+                }
+            }
+        }
+
+        private bool ExistemTextBoxVazios()
+        {
+            foreach (Control control in this.Controls)
+            {
+                if (control is TextBox ||  control is MaskedTextBox) 
+                {
+                    var text = control.Text.Replace(",", "").Replace("-", "").Trim();
+
+                    if (text == "")
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;   
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
         }
@@ -145,7 +186,31 @@ namespace Prototipo_po2
             Validacoes.ValidaCpf(msk_cpf.Text);
             Validacoes.ValidarEmail(txt_email.Text); 
             MessageBox.Show(Validacoes.ValidaCpf(msk_cpf.Text).ToString());
-           
+
+            string nome = txt_name.Text;
+            string datanas = msk_data.Text;
+            string tele = msk_tele.Text;
+            string email = txt_email.Text;
+            string ende = txt_ende.Text;
+            string estado = txt_estado.Text;
+            string cpf = msk_cpf.Text;
+            string rg = msk_rg.Text;
+            string funcao = cm_estadocivil.Text;
+            string cidade = txt_cidade.Text;
+            string id = txt_id.Text;
+
+            Funcionario f = new Funcionario();
+            f.name = txt_name.Text;
+            f.cpf = msk_cpf.Text;
+
+            if (ExistemTextBoxVazios())
+            {
+                MessageBox.Show("Todos os campos são obrigatótios. Favor preencher os campos corretamente.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                Inserir(f);
+            }
 
         }
 

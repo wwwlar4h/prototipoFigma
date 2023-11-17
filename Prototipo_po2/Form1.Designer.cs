@@ -44,6 +44,8 @@
             this.msk_sala = new System.Windows.Forms.MaskedTextBox();
             this.msk_cpf = new System.Windows.Forms.MaskedTextBox();
             this.msk_rg = new System.Windows.Forms.MaskedTextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // cm_estadocivil
@@ -186,7 +188,7 @@
             // 
             this.btn_cancelar.Font = new System.Drawing.Font("Lucida Bright", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cancelar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_cancelar.Location = new System.Drawing.Point(62, 481);
+            this.btn_cancelar.Location = new System.Drawing.Point(58, 462);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(83, 23);
             this.btn_cancelar.TabIndex = 15;
@@ -199,7 +201,7 @@
             this.btn_cadastrar.BackColor = System.Drawing.Color.Transparent;
             this.btn_cadastrar.Font = new System.Drawing.Font("Lucida Bright", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cadastrar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_cadastrar.Location = new System.Drawing.Point(182, 481);
+            this.btn_cadastrar.Location = new System.Drawing.Point(193, 462);
             this.btn_cadastrar.Name = "btn_cadastrar";
             this.btn_cadastrar.Size = new System.Drawing.Size(94, 23);
             this.btn_cadastrar.TabIndex = 16;
@@ -212,7 +214,7 @@
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.button1.Location = new System.Drawing.Point(756, 1);
+            this.button1.Location = new System.Drawing.Point(849, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(30, 21);
             this.button1.TabIndex = 17;
@@ -262,12 +264,23 @@
             this.msk_rg.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.msk_rg_MaskInputRejected);
             this.msk_rg.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.msk_rg_KeyPress);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.LightSkyBlue;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(29, 509);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(813, 247);
+            this.dataGridView1.TabIndex = 21;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Prototipo_po2.Properties.Resources.Frame_1__6_;
-            this.ClientSize = new System.Drawing.Size(789, 537);
+            this.BackgroundImage = global::Prototipo_po2.Properties.Resources.Frame_1__7_;
+            this.ClientSize = new System.Drawing.Size(881, 768);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.msk_rg);
             this.Controls.Add(this.msk_cpf);
             this.Controls.Add(this.msk_sala);
@@ -288,6 +301,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -311,6 +325,7 @@
         private System.Windows.Forms.MaskedTextBox msk_sala;
         private System.Windows.Forms.MaskedTextBox msk_cpf;
         private System.Windows.Forms.MaskedTextBox msk_rg;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 
