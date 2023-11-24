@@ -83,6 +83,46 @@ namespace Prototipo_po2.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Frame_1__10_ {
+            get {
+                object obj = ResourceManager.GetObject("Frame 1 (10)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Frame_1__11_ {
+            get {
+                object obj = ResourceManager.GetObject("Frame 1 (11)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Frame_1__12_ {
+            get {
+                object obj = ResourceManager.GetObject("Frame 1 (12)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Frame_1__13_ {
+            get {
+                object obj = ResourceManager.GetObject("Frame 1 (13)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Frame_1__2_ {
             get {
                 object obj = ResourceManager.GetObject("Frame 1 (2)", resourceCulture);
@@ -136,6 +176,56 @@ namespace Prototipo_po2.Properties {
         internal static System.Drawing.Bitmap Frame_1__7_ {
             get {
                 object obj = ResourceManager.GetObject("Frame 1 (7)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Frame_1__9_ {
+            get {
+                object obj = ResourceManager.GetObject("Frame 1 (9)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Frame_2 {
+            get {
+                object obj = ResourceManager.GetObject("Frame 2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Frame_2__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Frame 2 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Frame_2__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Frame 2 (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Frame_2__3_ {
+            get {
+                object obj = ResourceManager.GetObject("Frame 2 (3)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

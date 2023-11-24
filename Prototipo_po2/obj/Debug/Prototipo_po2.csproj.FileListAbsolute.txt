@@ -41,3 +41,5 @@ C:\Users\2022102020030\source\repos\Prototipo_po2\Prototipo_po2\bin\Debug\System
 C:\Users\2022102020030\source\repos\Prototipo_po2\Prototipo_po2\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\2022102020030\source\repos\Prototipo_po2\Prototipo_po2\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\2022102020030\source\repos\Prototipo_po2\Prototipo_po2\obj\Debug\Prototipo_po2.csproj.CopyComplete
+C:\Users\2022102020030\source\repos\Prototipo_po2\Prototipo_po2\obj\Debug\Prototipo_po2.Menu.resources
+C:\Users\2022102020030\source\repos\Prototipo_po2\Prototipo_po2\obj\Debug\Prototipo_po2.CadastroEmpresa.resources

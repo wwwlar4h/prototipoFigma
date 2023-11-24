@@ -19,7 +19,7 @@ namespace Prototipo_po2
         public Form1()
         {
             InitializeComponent(); 
-            Inserir();
+            //Inserir();
             Consultar();
 
             btn_cadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat; 
@@ -40,6 +40,7 @@ namespace Prototipo_po2
             button1.FlatAppearance.MouseOverBackColor = Color.Transparent;
             button1.BackColor = Color.Transparent;
 
+
             string nome = txt_name.Text;    
             string datanas = msk_data.Text;
             string tele = msk_tele.Text;
@@ -55,7 +56,7 @@ namespace Prototipo_po2
            Funcionario f = new Funcionario ();
 
         }
-        private void Inserir (Funcionario funcionario)
+        private void Inserir (Funcionario f)
         {
           
             try
@@ -64,15 +65,15 @@ namespace Prototipo_po2
 
                 var comando = conexao.Comando("INSERT INTO funcionario (nome_func, cpf_func) VALUES (@nome, @cpf)");
 
-                comando.Parameters.AddWithValue("@ID", funcionario.id);
-                comando.Parameters.AddWithValue("@nome", funcionario.name);
-                comando.Parameters.AddWithValue("@cpf", funcionario.cpf);
-                comando.Parameters.AddWithValue("@datanas", funcionario.datanas);
-                comando.Parameters.AddWithValue("@email", funcionario.email);
-                comando.Parameters.AddWithValue("@rg", funcionario.rg);
-                comando.Parameters.AddWithValue("@endereco", funcionario.endereco);
-                comando.Parameters.AddWithValue("@estado", funcionario.estado);
-                comando.Parameters.AddWithValue("@telefone", funcionario.telefone);
+                comando.Parameters.AddWithValue("@ID", f.id);
+                comando.Parameters.AddWithValue("@nome", f.name);
+                comando.Parameters.AddWithValue("@cpf", f.cpf);
+                comando.Parameters.AddWithValue("@datanas", f.datanas);
+                comando.Parameters.AddWithValue("@email", f.email);
+                comando.Parameters.AddWithValue("@rg", f.rg);
+                comando.Parameters.AddWithValue("@endereco", f.endereco);
+                comando.Parameters.AddWithValue("@estado", f.estado);
+                comando.Parameters.AddWithValue("@telefone", f.telefone);
              
 
                var resultado = comando.ExecuteNonQuery();
@@ -275,6 +276,11 @@ namespace Prototipo_po2
         private void cm_funcao_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button_voltar_Click(object sender, EventArgs e)
+        {
+            Close();    
         }
     }
 }

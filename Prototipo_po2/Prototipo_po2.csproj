@@ -98,20 +98,38 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Conexao\Conexoes.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="CadastroEmpresa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="CadastroEmpresa.Designer.cs">
+      <DependentUpon>CadastroEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Conexao\Conexoes.cs" />
+    <Compile Include="Telas\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Funcionario.cs" />
+    <Compile Include="Telas\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Validar.cs" />
     <Compile Include="ValidarEmail.cs" />
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="CadastroEmpresa.resx">
+      <DependentUpon>CadastroEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -160,6 +178,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Frame 1 %287%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Frame 1 %289%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Frame 1 %2810%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Frame 1 %2811%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Frame 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Frame 1 %2812%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Frame 1 %2813%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -45,6 +45,7 @@
             this.msk_cpf = new System.Windows.Forms.MaskedTextBox();
             this.msk_rg = new System.Windows.Forms.MaskedTextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button_voltar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -201,7 +202,7 @@
             this.btn_cadastrar.BackColor = System.Drawing.Color.Transparent;
             this.btn_cadastrar.Font = new System.Drawing.Font("Lucida Bright", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cadastrar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_cadastrar.Location = new System.Drawing.Point(193, 462);
+            this.btn_cadastrar.Location = new System.Drawing.Point(195, 462);
             this.btn_cadastrar.Name = "btn_cadastrar";
             this.btn_cadastrar.Size = new System.Drawing.Size(94, 23);
             this.btn_cadastrar.TabIndex = 16;
@@ -271,8 +272,20 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(29, 509);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(813, 247);
+            this.dataGridView1.Size = new System.Drawing.Size(813, 195);
             this.dataGridView1.TabIndex = 21;
+            // 
+            // button_voltar
+            // 
+            this.button_voltar.BackColor = System.Drawing.Color.Transparent;
+            this.button_voltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_voltar.Location = new System.Drawing.Point(765, 721);
+            this.button_voltar.Name = "button_voltar";
+            this.button_voltar.Size = new System.Drawing.Size(94, 26);
+            this.button_voltar.TabIndex = 35;
+            this.button_voltar.Text = "Voltar";
+            this.button_voltar.UseVisualStyleBackColor = false;
+            this.button_voltar.Click += new System.EventHandler(this.button_voltar_Click);
             // 
             // Form1
             // 
@@ -280,6 +293,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Prototipo_po2.Properties.Resources.Frame_1__7_;
             this.ClientSize = new System.Drawing.Size(881, 768);
+            this.Controls.Add(this.button_voltar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.msk_rg);
             this.Controls.Add(this.msk_cpf);
@@ -326,6 +340,7 @@
         private System.Windows.Forms.MaskedTextBox msk_cpf;
         private System.Windows.Forms.MaskedTextBox msk_rg;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button_voltar;
     }
 }
 
