@@ -30,10 +30,9 @@
         {
             this.txt_razao = new System.Windows.Forms.TextBox();
             this.txt_nomefantasia = new System.Windows.Forms.TextBox();
-            this.txt_cnpj = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.txt_nome = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.capsocial = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
@@ -50,13 +49,15 @@
             this.txt_cpf = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.button_voltar = new System.Windows.Forms.Button();
             this.cancelar = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.txt_cnpj = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_razao
@@ -81,17 +82,6 @@
             this.txt_nomefantasia.Size = new System.Drawing.Size(460, 24);
             this.txt_nomefantasia.TabIndex = 6;
             // 
-            // txt_cnpj
-            // 
-            this.txt_cnpj.BackColor = System.Drawing.Color.White;
-            this.txt_cnpj.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_cnpj.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_cnpj.ForeColor = System.Drawing.Color.Navy;
-            this.txt_cnpj.Location = new System.Drawing.Point(47, 192);
-            this.txt_cnpj.Name = "txt_cnpj";
-            this.txt_cnpj.Size = new System.Drawing.Size(150, 24);
-            this.txt_cnpj.TabIndex = 9;
-            // 
             // textBox6
             // 
             this.textBox6.BackColor = System.Drawing.Color.White;
@@ -114,16 +104,16 @@
             this.txt_nome.Size = new System.Drawing.Size(264, 24);
             this.txt_nome.TabIndex = 12;
             // 
-            // textBox10
+            // capsocial
             // 
-            this.textBox10.BackColor = System.Drawing.Color.White;
-            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.ForeColor = System.Drawing.Color.Navy;
-            this.textBox10.Location = new System.Drawing.Point(718, 291);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(110, 24);
-            this.textBox10.TabIndex = 15;
+            this.capsocial.BackColor = System.Drawing.Color.White;
+            this.capsocial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.capsocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.capsocial.ForeColor = System.Drawing.Color.Navy;
+            this.capsocial.Location = new System.Drawing.Point(718, 291);
+            this.capsocial.Name = "capsocial";
+            this.capsocial.Size = new System.Drawing.Size(110, 24);
+            this.capsocial.TabIndex = 15;
             // 
             // comboBox1
             // 
@@ -140,7 +130,7 @@
             this.radioButton1.BackColor = System.Drawing.Color.Transparent;
             this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton1.ForeColor = System.Drawing.SystemColors.Control;
-            this.radioButton1.Location = new System.Drawing.Point(578, 295);
+            this.radioButton1.Location = new System.Drawing.Point(21, 4);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(83, 20);
             this.radioButton1.TabIndex = 18;
@@ -155,7 +145,7 @@
             this.radioButton2.BackColor = System.Drawing.Color.Transparent;
             this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton2.ForeColor = System.Drawing.SystemColors.Control;
-            this.radioButton2.Location = new System.Drawing.Point(578, 321);
+            this.radioButton2.Location = new System.Drawing.Point(21, 25);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(63, 20);
             this.radioButton2.TabIndex = 19;
@@ -169,7 +159,7 @@
             this.radioButton3.BackColor = System.Drawing.Color.Transparent;
             this.radioButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton3.ForeColor = System.Drawing.SystemColors.Control;
-            this.radioButton3.Location = new System.Drawing.Point(578, 347);
+            this.radioButton3.Location = new System.Drawing.Point(21, 51);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(70, 20);
             this.radioButton3.TabIndex = 20;
@@ -234,10 +224,10 @@
             // msk_telefone
             // 
             this.msk_telefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msk_telefone.Location = new System.Drawing.Point(662, 191);
+            this.msk_telefone.Location = new System.Drawing.Point(707, 193);
             this.msk_telefone.Mask = "(99)00000-0000";
             this.msk_telefone.Name = "msk_telefone";
-            this.msk_telefone.Size = new System.Drawing.Size(100, 24);
+            this.msk_telefone.Size = new System.Drawing.Size(125, 24);
             this.msk_telefone.TabIndex = 25;
             // 
             // radioButton7
@@ -246,7 +236,7 @@
             this.radioButton7.BackColor = System.Drawing.Color.Transparent;
             this.radioButton7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton7.ForeColor = System.Drawing.SystemColors.Control;
-            this.radioButton7.Location = new System.Drawing.Point(30, 43);
+            this.radioButton7.Location = new System.Drawing.Point(13, 4);
             this.radioButton7.Name = "radioButton7";
             this.radioButton7.Size = new System.Drawing.Size(53, 20);
             this.radioButton7.TabIndex = 26;
@@ -261,7 +251,7 @@
             this.radioButton8.BackColor = System.Drawing.Color.Transparent;
             this.radioButton8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton8.ForeColor = System.Drawing.SystemColors.Control;
-            this.radioButton8.Location = new System.Drawing.Point(119, 34);
+            this.radioButton8.Location = new System.Drawing.Point(13, 30);
             this.radioButton8.Name = "radioButton8";
             this.radioButton8.Size = new System.Drawing.Size(60, 20);
             this.radioButton8.TabIndex = 27;
@@ -278,7 +268,7 @@
             "MEI – Microempreendedor Individual",
             "Sociedade Anônima, Sociedade Simples Limitada",
             "Sociedade Limitada Unipessoal"});
-            this.comboBox2.Location = new System.Drawing.Point(616, 401);
+            this.comboBox2.Location = new System.Drawing.Point(565, 291);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 24);
             this.comboBox2.TabIndex = 28;
@@ -314,39 +304,24 @@
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Location = new System.Drawing.Point(347, 397);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(152, 89);
+            this.panel1.Size = new System.Drawing.Size(159, 89);
             this.panel1.TabIndex = 31;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Location = new System.Drawing.Point(562, 291);
+            this.panel2.Controls.Add(this.radioButton8);
+            this.panel2.Controls.Add(this.radioButton7);
+            this.panel2.Location = new System.Drawing.Point(562, 397);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(110, 84);
             this.panel2.TabIndex = 32;
-            // 
-            // panel3
-            // 
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(136, 81);
-            this.panel3.TabIndex = 0;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.Transparent;
-            this.panel4.Location = new System.Drawing.Point(203, 191);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(137, 28);
-            this.panel4.TabIndex = 33;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // button_voltar
             // 
             this.button_voltar.BackColor = System.Drawing.Color.Transparent;
             this.button_voltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_voltar.Location = new System.Drawing.Point(777, 542);
+            this.button_voltar.Location = new System.Drawing.Point(33, 542);
             this.button_voltar.Name = "button_voltar";
             this.button_voltar.Size = new System.Drawing.Size(94, 26);
             this.button_voltar.TabIndex = 34;
@@ -358,7 +333,8 @@
             // 
             this.cancelar.BackColor = System.Drawing.Color.Transparent;
             this.cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancelar.Location = new System.Drawing.Point(668, 542);
+            this.cancelar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.cancelar.Location = new System.Drawing.Point(642, 542);
             this.cancelar.Name = "cancelar";
             this.cancelar.Size = new System.Drawing.Size(94, 26);
             this.cancelar.TabIndex = 35;
@@ -368,19 +344,58 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.radioButton8);
-            this.panel5.Controls.Add(this.radioButton7);
-            this.panel5.Location = new System.Drawing.Point(289, 542);
+            this.panel5.BackColor = System.Drawing.Color.Transparent;
+            this.panel5.Controls.Add(this.radioButton3);
+            this.panel5.Controls.Add(this.radioButton2);
+            this.panel5.Controls.Add(this.radioButton1);
+            this.panel5.ForeColor = System.Drawing.Color.Transparent;
+            this.panel5.Location = new System.Drawing.Point(697, 397);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(200, 100);
+            this.panel5.Size = new System.Drawing.Size(142, 83);
             this.panel5.TabIndex = 36;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.LightSteelBlue;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(33, 583);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(823, 161);
+            this.dataGridView1.TabIndex = 37;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(762, 542);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(94, 26);
+            this.button1.TabIndex = 38;
+            this.button1.Text = "Cadastrar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // txt_cnpj
+            // 
+            this.txt_cnpj.BackColor = System.Drawing.Color.White;
+            this.txt_cnpj.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_cnpj.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_cnpj.ForeColor = System.Drawing.Color.Navy;
+            this.txt_cnpj.Location = new System.Drawing.Point(47, 193);
+            this.txt_cnpj.Name = "txt_cnpj";
+            this.txt_cnpj.Size = new System.Drawing.Size(156, 24);
+            this.txt_cnpj.TabIndex = 39;
             // 
             // CadastroEmpresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Prototipo_po2.Properties.Resources.Frame_2;
-            this.ClientSize = new System.Drawing.Size(965, 706);
+            this.BackgroundImage = global::Prototipo_po2.Properties.Resources.Frame_2__1_1;
+            this.ClientSize = new System.Drawing.Size(897, 749);
+            this.Controls.Add(this.txt_cnpj);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.cancelar);
             this.Controls.Add(this.button_voltar);
@@ -392,26 +407,23 @@
             this.Controls.Add(this.radioButton6);
             this.Controls.Add(this.radioButton5);
             this.Controls.Add(this.radioButton4);
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.capsocial);
             this.Controls.Add(this.txt_nome);
             this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.txt_cnpj);
             this.Controls.Add(this.txt_nomefantasia);
             this.Controls.Add(this.txt_razao);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel4);
             this.Name = "CadastroEmpresa";
             this.Text = "CadastroEmpresa";
             this.Load += new System.EventHandler(this.CadastroEmpresa_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CadastroEmpresa_KeyPress);
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -421,10 +433,9 @@
 
         private System.Windows.Forms.TextBox txt_razao;
         private System.Windows.Forms.TextBox txt_nomefantasia;
-        private System.Windows.Forms.TextBox txt_cnpj;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox txt_nome;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox capsocial;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
@@ -441,10 +452,11 @@
         private System.Windows.Forms.TextBox txt_cpf;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button button_voltar;
         private System.Windows.Forms.Button cancelar;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txt_cnpj;
     }
 }

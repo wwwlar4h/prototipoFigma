@@ -155,10 +155,10 @@ namespace Prototipo_po2
 
         private void btn_cancelar_Click(object sender, EventArgs e)
         {
-            cm_estadocivil.Text = " ";
-            cm_funcao.Text = " ";
-            msk_data.Text = " ";
-            msk_tele.Text = " ";
+            cm_estadocivil.Text = "";
+            cm_funcao.Text = "";
+            msk_data.Text = "";
+            msk_tele.Text = "";
             txt_id.Clear();
             txt_name.Clear();
             msk_data.Clear();

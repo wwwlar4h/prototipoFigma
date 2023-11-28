@@ -202,7 +202,7 @@
             this.btn_cadastrar.BackColor = System.Drawing.Color.Transparent;
             this.btn_cadastrar.Font = new System.Drawing.Font("Lucida Bright", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cadastrar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_cadastrar.Location = new System.Drawing.Point(195, 462);
+            this.btn_cadastrar.Location = new System.Drawing.Point(196, 462);
             this.btn_cadastrar.Name = "btn_cadastrar";
             this.btn_cadastrar.Size = new System.Drawing.Size(94, 23);
             this.btn_cadastrar.TabIndex = 16;

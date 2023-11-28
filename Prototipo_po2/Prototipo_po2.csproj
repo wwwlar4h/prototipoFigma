@@ -105,6 +105,7 @@
       <DependentUpon>CadastroEmpresa.cs</DependentUpon>
     </Compile>
     <Compile Include="Conexao\Conexoes.cs" />
+    <Compile Include="Empresa.cs" />
     <Compile Include="Telas\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +197,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Frame 1 %2813%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Frame 21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Frame 2 %281%291.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

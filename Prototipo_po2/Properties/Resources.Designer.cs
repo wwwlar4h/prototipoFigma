@@ -213,6 +213,16 @@ namespace Prototipo_po2.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Frame_2__1_1 {
+            get {
+                object obj = ResourceManager.GetObject("Frame 2 (1)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Frame_2__2_ {
             get {
                 object obj = ResourceManager.GetObject("Frame 2 (2)", resourceCulture);
@@ -226,6 +236,16 @@ namespace Prototipo_po2.Properties {
         internal static System.Drawing.Bitmap Frame_2__3_ {
             get {
                 object obj = ResourceManager.GetObject("Frame 2 (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Frame_21 {
+            get {
+                object obj = ResourceManager.GetObject("Frame 21", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
