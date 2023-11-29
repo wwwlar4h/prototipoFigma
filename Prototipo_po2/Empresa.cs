@@ -10,11 +10,12 @@ namespace Prototipo_po2
 {
     internal class Empresa
     {
+        public string nomeFantasia { get; set; }
         public string cnpj { get; set; }
         public string razaosocial { get; set; }
         public string situacaoCadastral { get; set; }
         public string regimeTribu { get; set;}
-        public DateTime datainicio { get; set; }    
+        public string datainicio { get; set; }    
         public string telefone { get; set;}
         public double capitalsocial { get; set; }
         public string estado { get; set; }  
@@ -25,8 +26,9 @@ namespace Prototipo_po2
         public string nomeproprie { get; set; }
         public string cpfproprie { get; set; }
 
-        Empresa (string cnpj, string razaosocial, string situacaoCadastral, string regimeTribu, DateTime datainicio, string telefone, double capitalsocial, string estado, string cidade, string tipo, string porte, string natureza, string nomeproprie, string cpfproprie)
+        Empresa (string nomeFantasia, string cnpj, string razaosocial, string situacaoCadastral, string regimeTribu, string datainicio, string telefone, double capitalsocial, string estado, string cidade, string tipo, string porte, string natureza, string nomeproprie, string cpfproprie)
         {
+            this.nomeFantasia = nomeFantasia;
             this.cnpj = cnpj;
             this.razaosocial = razaosocial;
             this.situacaoCadastral = situacaoCadastral;

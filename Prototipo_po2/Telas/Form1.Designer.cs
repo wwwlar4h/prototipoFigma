@@ -45,7 +45,6 @@
             this.msk_cpf = new System.Windows.Forms.MaskedTextBox();
             this.msk_rg = new System.Windows.Forms.MaskedTextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button_voltar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,7 +86,6 @@
             this.cm_funcao.Name = "cm_funcao";
             this.cm_funcao.Size = new System.Drawing.Size(134, 24);
             this.cm_funcao.TabIndex = 1;
-            this.cm_funcao.SelectedIndexChanged += new System.EventHandler(this.cm_funcao_SelectedIndexChanged);
             // 
             // txt_id
             // 
@@ -99,8 +97,6 @@
             this.txt_id.Name = "txt_id";
             this.txt_id.Size = new System.Drawing.Size(100, 26);
             this.txt_id.TabIndex = 2;
-            this.txt_id.TextChanged += new System.EventHandler(this.txt_id_TextChanged);
-            this.txt_id.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_id_KeyPress);
             // 
             // txt_name
             // 
@@ -143,12 +139,11 @@
             this.msk_data.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.msk_data.ForeColor = System.Drawing.Color.Navy;
             this.msk_data.Location = new System.Drawing.Point(29, 290);
-            this.msk_data.Mask = "00/00/0000";
+            this.msk_data.Mask = "0000/00/00";
             this.msk_data.Name = "msk_data";
             this.msk_data.Size = new System.Drawing.Size(93, 26);
             this.msk_data.TabIndex = 7;
             this.msk_data.ValidatingType = typeof(System.DateTime);
-            this.msk_data.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.msk_data_KeyPress);
             // 
             // msk_tele
             // 
@@ -161,7 +156,6 @@
             this.msk_tele.Name = "msk_tele";
             this.msk_tele.Size = new System.Drawing.Size(131, 26);
             this.msk_tele.TabIndex = 11;
-            this.msk_tele.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.msk_tele_KeyPress);
             // 
             // txt_estado
             // 
@@ -194,8 +188,7 @@
             this.btn_cancelar.Size = new System.Drawing.Size(83, 23);
             this.btn_cancelar.TabIndex = 15;
             this.btn_cancelar.Text = "Cancelar";
-            this.btn_cancelar.UseVisualStyleBackColor = true;
-            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
+            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click_1);
             // 
             // btn_cadastrar
             // 
@@ -208,7 +201,7 @@
             this.btn_cadastrar.TabIndex = 16;
             this.btn_cadastrar.Text = "Cadastrar";
             this.btn_cadastrar.UseVisualStyleBackColor = false;
-            this.btn_cadastrar.Click += new System.EventHandler(this.btn_cadastrar_Click);
+            this.btn_cadastrar.Click += new System.EventHandler(this.btn_cadastrar_Click_1);
             // 
             // button1
             // 
@@ -220,7 +213,7 @@
             this.button1.Size = new System.Drawing.Size(30, 21);
             this.button1.TabIndex = 17;
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // msk_sala
             // 
@@ -234,7 +227,6 @@
             this.msk_sala.Size = new System.Drawing.Size(134, 26);
             this.msk_sala.TabIndex = 18;
             this.msk_sala.ValidatingType = typeof(int);
-            this.msk_sala.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.msk_sala_KeyPress);
             // 
             // msk_cpf
             // 
@@ -248,7 +240,6 @@
             this.msk_cpf.Size = new System.Drawing.Size(131, 26);
             this.msk_cpf.TabIndex = 19;
             this.msk_cpf.ValidatingType = typeof(int);
-            this.msk_cpf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.msk_cpf_KeyPress);
             // 
             // msk_rg
             // 
@@ -262,38 +253,24 @@
             this.msk_rg.Size = new System.Drawing.Size(131, 26);
             this.msk_rg.TabIndex = 20;
             this.msk_rg.ValidatingType = typeof(int);
-            this.msk_rg.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.msk_rg_MaskInputRejected);
-            this.msk_rg.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.msk_rg_KeyPress);
             // 
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.LightSkyBlue;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(29, 509);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 509);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(813, 195);
+            this.dataGridView1.Size = new System.Drawing.Size(857, 171);
             this.dataGridView1.TabIndex = 21;
-            // 
-            // button_voltar
-            // 
-            this.button_voltar.BackColor = System.Drawing.Color.Transparent;
-            this.button_voltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_voltar.Location = new System.Drawing.Point(765, 721);
-            this.button_voltar.Name = "button_voltar";
-            this.button_voltar.Size = new System.Drawing.Size(94, 26);
-            this.button_voltar.TabIndex = 35;
-            this.button_voltar.Text = "Voltar";
-            this.button_voltar.UseVisualStyleBackColor = false;
-            this.button_voltar.Click += new System.EventHandler(this.button_voltar_Click);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Prototipo_po2.Properties.Resources.Frame_1__7_;
-            this.ClientSize = new System.Drawing.Size(881, 768);
-            this.Controls.Add(this.button_voltar);
+            this.ClientSize = new System.Drawing.Size(881, 704);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.msk_rg);
             this.Controls.Add(this.msk_cpf);
@@ -313,8 +290,7 @@
             this.Controls.Add(this.cm_estadocivil);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.Form1_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -340,7 +316,6 @@
         private System.Windows.Forms.MaskedTextBox msk_cpf;
         private System.Windows.Forms.MaskedTextBox msk_rg;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button_voltar;
     }
 }
 

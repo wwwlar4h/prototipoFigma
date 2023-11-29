@@ -105,6 +105,7 @@
       <DependentUpon>CadastroEmpresa.cs</DependentUpon>
     </Compile>
     <Compile Include="Conexao\Conexoes.cs" />
+    <Compile Include="DAOHelper.cs" />
     <Compile Include="Empresa.cs" />
     <Compile Include="Telas\Form1.cs">
       <SubType>Form</SubType>

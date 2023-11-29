@@ -4,13 +4,13 @@ using MySql.Data.MySqlClient;
 
 namespace Prototipo_po2.Conexao
 {
-    internal class Conexoes
+    public class Conexoes
     {
         private string _servidor = "localhost";
-        private string _porta = "3360";
+        private string _porta = "3306";
         private string _usuario = "root";
-        private string _senha = "root";
-        private string _bancosDadosnome = "Empresa_x2a_bd";
+        private string _senha = "Lar4h_2006#";
+        private string _bancosDadosnome = "bd_Prototipo_atvfinal";
         private MySqlConnection connection;
         private MySqlCommand command;
 

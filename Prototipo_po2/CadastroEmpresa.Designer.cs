@@ -47,17 +47,17 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.cb_situ_cadastral = new System.Windows.Forms.ComboBox();
             this.txt_cpf = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelRegime = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button_voltar = new System.Windows.Forms.Button();
             this.cancelar = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtv_empresa = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.txt_cnpj = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtv_empresa)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_razao
@@ -118,7 +118,36 @@
             // comboBox1
             // 
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.ForeColor = System.Drawing.Color.Navy;
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Acre (AC)",
+            "Alagoas (AL)",
+            "Amapá (AP)",
+            "Amazonas (AM)",
+            "Bahia (BA)",
+            "Ceará (CE)",
+            "Distrito Federal (DF)",
+            "Espírito Santo (ES)",
+            "Goiás (GO)",
+            "Maranhão (MA)",
+            "Mato Grosso (MT)",
+            "Mato Grosso do Sul (MS)",
+            "Minas Gerais (MG)",
+            "Pará (PA)",
+            "Paraíba (PB)",
+            "Paraná (PR)",
+            "Pernambuco (PE)",
+            "Piauí (PI)",
+            "Rio de Janeiro (RJ)",
+            "Rio Grande do Norte (RN)",
+            "Rio Grande do Sul (RS)",
+            "Rondônia (RO)",
+            "Roraima (RR)",
+            "Santa Catarina (SC)",
+            "São Paulo (SP)",
+            "Sergipe (SE)",
+            "Tocantins (TO)"});
             this.comboBox1.Location = new System.Drawing.Point(47, 291);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
@@ -145,13 +174,14 @@
             this.radioButton2.BackColor = System.Drawing.Color.Transparent;
             this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton2.ForeColor = System.Drawing.SystemColors.Control;
-            this.radioButton2.Location = new System.Drawing.Point(21, 25);
+            this.radioButton2.Location = new System.Drawing.Point(21, 30);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(63, 20);
             this.radioButton2.TabIndex = 19;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Médio";
             this.radioButton2.UseVisualStyleBackColor = false;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // radioButton3
             // 
@@ -159,7 +189,7 @@
             this.radioButton3.BackColor = System.Drawing.Color.Transparent;
             this.radioButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton3.ForeColor = System.Drawing.SystemColors.Control;
-            this.radioButton3.Location = new System.Drawing.Point(21, 51);
+            this.radioButton3.Location = new System.Drawing.Point(21, 56);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(70, 20);
             this.radioButton3.TabIndex = 20;
@@ -214,8 +244,9 @@
             // msk_datainicio
             // 
             this.msk_datainicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msk_datainicio.ForeColor = System.Drawing.Color.Navy;
             this.msk_datainicio.Location = new System.Drawing.Point(368, 293);
-            this.msk_datainicio.Mask = "00/00/0000";
+            this.msk_datainicio.Mask = "0000-00-00";
             this.msk_datainicio.Name = "msk_datainicio";
             this.msk_datainicio.Size = new System.Drawing.Size(100, 24);
             this.msk_datainicio.TabIndex = 24;
@@ -262,6 +293,7 @@
             // comboBox2
             // 
             this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.ForeColor = System.Drawing.Color.Navy;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
             "EI – Empresário Individual",
@@ -276,6 +308,7 @@
             // cb_situ_cadastral
             // 
             this.cb_situ_cadastral.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_situ_cadastral.ForeColor = System.Drawing.Color.Navy;
             this.cb_situ_cadastral.FormattingEnabled = true;
             this.cb_situ_cadastral.Items.AddRange(new object[] {
             "Ativa ",
@@ -299,13 +332,14 @@
             this.txt_cpf.Size = new System.Drawing.Size(264, 24);
             this.txt_cpf.TabIndex = 30;
             // 
-            // panel1
+            // panelRegime
             // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Location = new System.Drawing.Point(347, 397);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(159, 89);
-            this.panel1.TabIndex = 31;
+            this.panelRegime.BackColor = System.Drawing.Color.Transparent;
+            this.panelRegime.Location = new System.Drawing.Point(347, 397);
+            this.panelRegime.Name = "panelRegime";
+            this.panelRegime.Size = new System.Drawing.Size(159, 89);
+            this.panelRegime.TabIndex = 31;
+            this.panelRegime.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel2
             // 
@@ -354,15 +388,15 @@
             this.panel5.Size = new System.Drawing.Size(142, 83);
             this.panel5.TabIndex = 36;
             // 
-            // dataGridView1
+            // dtv_empresa
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.LightSteelBlue;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(33, 583);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(823, 161);
-            this.dataGridView1.TabIndex = 37;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dtv_empresa.BackgroundColor = System.Drawing.Color.LightSteelBlue;
+            this.dtv_empresa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtv_empresa.Location = new System.Drawing.Point(33, 583);
+            this.dtv_empresa.Name = "dtv_empresa";
+            this.dtv_empresa.Size = new System.Drawing.Size(823, 133);
+            this.dtv_empresa.TabIndex = 37;
+            this.dtv_empresa.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // button1
             // 
@@ -392,10 +426,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Prototipo_po2.Properties.Resources.Frame_2__1_1;
-            this.ClientSize = new System.Drawing.Size(897, 749);
+            this.ClientSize = new System.Drawing.Size(897, 728);
             this.Controls.Add(this.txt_cnpj);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dtv_empresa);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.cancelar);
             this.Controls.Add(this.button_voltar);
@@ -413,7 +447,7 @@
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.txt_nomefantasia);
             this.Controls.Add(this.txt_razao);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelRegime);
             this.Controls.Add(this.panel2);
             this.Name = "CadastroEmpresa";
             this.Text = "CadastroEmpresa";
@@ -423,7 +457,7 @@
             this.panel2.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtv_empresa)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -450,12 +484,12 @@
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox cb_situ_cadastral;
         private System.Windows.Forms.TextBox txt_cpf;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelRegime;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button_voltar;
         private System.Windows.Forms.Button cancelar;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtv_empresa;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txt_cnpj;
     }
