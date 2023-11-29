@@ -18,6 +18,9 @@ estado_civil_Fun varchar(100),
 salario_Fun double
 );
 
+Alter table funcionario
+modify column cpf_Fun varchar(20);
+
 create table empresa(
 id_Emp integer primary key auto_increment,
 cnpj_Emp varchar(50),
@@ -38,4 +41,4 @@ cpf_proprietario_Emp varchar(20)
 );
 
 
-select * from empresa;
+select * from funcionario;
